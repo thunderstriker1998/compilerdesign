@@ -1,0 +1,37 @@
+%{
+	#include<stdio.h>
+	#include<string.h>
+	int yywrap();
+	int yylex();	
+	void yyerror(char *s);
+	int yyparse();
+%}
+
+%token FOR OP CL OP1 CL1 TEXT SC UNR
+
+%union{
+	char *str;
+}
+
+%type <str> s stmt for FOR OP CL OP1 CL1 TEXT SC UNR
+
+%%
+
+s:		for s| stmt s | {};
+for:	FOR OP TEXT SC TEXT SC TEXT CL {printf("%s;\nwhile(%s)",$3,$5);} OP1 {printf("%s",$10);} s CL1 {printf("%s;\n%s",$7,$13);};
+stmt:	TEXT {printf("%s",$1);} SC {printf("%s",$3);};
+
+%%
+
+void yyerror(char *s)
+{
+	printf("%s\n",s);
+}
+int yywrap()
+{
+	return 1;
+}
+int main(void)
+{
+	yyparse();
+}
