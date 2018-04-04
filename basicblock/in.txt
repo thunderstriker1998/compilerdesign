@@ -1,0 +1,8 @@
+{
+	int a,b,c,d;
+	a = 10;
+	b = c + a+b;
+	a = b + c;
+	d = a / d;
+	c = b + c;
+}

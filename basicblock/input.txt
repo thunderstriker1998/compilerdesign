@@ -1,0 +1,15 @@
+{
+	int i,j,k,n,m,x,p;
+	i=1;
+	j=k+1;
+	while(i<n && j<m){
+		if(i/2 == 0){
+			x=x+i;
+		}
+		else{
+			x = x - i;
+		}
+		j = j + p;
+		i = i * 2;
+	}
+}
