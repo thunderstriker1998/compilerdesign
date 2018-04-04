@@ -1,0 +1,12 @@
+%%
+if  	return IF ;
+then 	return THEN ;
+else 	return ELSE ;
+"(" 	return OP ;
+")"		return CL ;
+"{"		return OP1 ;
+"}"		return CL1 ;
+[\n \t]+	;
+[a-zA-Z0-9_+-=*/;]+	return TEXT ;
+. 		return UNR;
+%%

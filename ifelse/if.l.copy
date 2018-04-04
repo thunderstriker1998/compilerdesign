@@ -1,0 +1,13 @@
+%%
+if  	{printf("%s - IF \n",yytext);}
+then 	{printf("%s - THEN \n",yytext);}
+else 	{printf("%s - ELSE \n",yytext);}
+"(" 	{printf("%s - OP \n",yytext);}
+")"		{printf("%s - CL \n",yytext);}
+"{"		{printf("%s - OP1 \n",yytext);}
+"}"		{printf("%s - CL1 \n",yytext);}
+";"		{printf("%s - SC \n",yytext);}
+[\n \t]+		;
+[a-zA-Z0-9_]+	{printf("%s - TEXT \n",yytext);}
+. 		{printf("%s - unrec \n ",yytext);};
+%%
