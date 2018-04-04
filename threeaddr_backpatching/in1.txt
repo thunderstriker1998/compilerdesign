@@ -1,0 +1,14 @@
+{
+
+int a,b,c,d,e,i,j;
+if(i<j)
+{
+a=a+b;
+}
+else
+{
+c=c+d;
+e=e+d;
+}
+d=1;
+}

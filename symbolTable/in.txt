@@ -1,0 +1,19 @@
+{
+{
+	int i;
+{
+	int aa,ab,af;
+	double ac,ii,jj,i;
+	float ll;
+}		
+}
+{
+	int i;
+{
+	int a,b,f;
+	int c,d;
+	float l,k,j,i;
+}		
+float l,k,j;
+}
+}
